@@ -16,7 +16,7 @@ public class kmp {
 	Scanner s  = new Scanner(System.in); 
 	str=s.next(); 
 	int ans = Compute(str);
-	System.out.println("THE least nuymber of alphabets required is :"+ans);
+	System.out.println("THE least number of alphabets required is :"+ans);
 	
 	
 	}
@@ -70,7 +70,7 @@ public class kmp {
 		   System.out.println("check "+check);
 		   if(check.equals(sb.toString()))
 		   {
-			   System.out.println("pop");
+			 
 			    return count ;   
 		   }
 		   
