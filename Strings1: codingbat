@@ -1,0 +1,275 @@
+All Problems : http://codingbat.com/java/String-2
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1)doubleChar H	 
+ 
+ public String doubleChar(String str) {
+ 
+ String mac = ""; 
+ 
+ for(int i = 0 ; i < str.length() ; i ++ )
+ {
+   mac = mac + str.charAt(i)+str.charAt(i);
+ }
+ 
+  return mac ; 
+}
+
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2)countHi 	
+ 
+ public int countHi(String str) {
+  String mac = "hi"; 
+  int count = 0 ; 
+  for( int i = 0 ; i < str.length()-1 ; i ++)
+  {
+    if(   str.substring(i,i+2).equals("hi")       )
+    count ++ ;    
+  } 
+    return count ; 
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3)catDog
+ 
+ public boolean catDog(String str) {
+  int catcount = 0 ; 
+  int dogcount = 0 ;  
+  for(int i =0 ; i < str.length()-2; i ++)
+  {
+    if(str.substring(i,i+3).equals("cat")    )
+    catcount++; 
+    
+    else if (str.substring(i,i+3).equals("dog")  )
+     dogcount++; 
+     
+     else
+     continue; 
+  }
+  if(dogcount==catcount) return true ; 
+  else
+  return false ; 
+}
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4)countCode
+ public int countCode(String str) {
+  
+  
+  int count = 0 ; 
+  
+  for(int i = 0 ; i < str.length()-3 ; i++)
+  {
+    if (str.charAt(i)=='c' && str.charAt(i+1)=='o' && str.charAt(i+3)=='e'  )
+    count++; 
+  }
+  return count;   
+}
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 5)endOther
+ public boolean endOther(String a, String b) {
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    boolean test1 = a.length() >= b.length() 
+            && a.substring(a.length() - b.length()).equals(b);
+    boolean test2 = b.length() >= a.length() 
+            && b.substring(b.length() - a.length()).equals(a);
+    return test1 || test2;
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ 6)xyzThere
+ 
+ public boolean xyzThere(String str) {
+  if(str.length()<3 )
+  return false ; 
+  if(str.length()==3 && str.equals("xyz"))
+  return true ; 
+  
+  if(str.substring(0,3).equals("xyz"))
+  return true ;
+  for( int i = 1 ; i < str.length()-2 ; i ++ ) 
+  { 
+     if ( str.substring(i,i+3).equals("xyz")  && str.substring(i-1,i)!="." )
+            return true ; 
+  } 
+  return false ; 
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 7)bobThere	 
+ 
+ public boolean bobThere(String str) {
+  if(str.length()<3)
+  return false ; 
+  if(str.length()==3 && str.charAt(0)=='b' && str.charAt(2)=='b')
+  return true ;  
+  for(int  i = 0 ; i < str.length()-2; i ++ )
+  {
+    if  (str.charAt(i)=='b' && str.charAt(i+2)=='b')
+    return  true ; 
+  }
+  return false ; 
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 8)xyBalance	
+ public boolean xyBalance(String str) {
+ boolean flag = true;   
+ for(int i = 0 ; i <str.length() ; i++) 
+ {
+   if(str.charAt(i)=='x')     flag = false ; 
+   if(str.charAt(i)=='y')      flag = true ; 
+ }
+ if(str=="")   return true ;  
+ return flag ; 
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 9)mixString
+ public String mixString(String a, String b) {
+  String ans = ""; 
+  
+  if(a.length()>b.length())
+  {
+    for(int i = 0 ; i < b.length(); i++)
+    {
+      ans = ans + a.charAt(i) + b.charAt(i); 
+    }
+    ans = ans + a.substring(a.length()-((a.length()-b.length())) ) ; 
+  }
+  
+  else if (a.length()==b.length())
+  {
+     for(int i = 0 ; i < a.length(); i++)
+    {
+      ans = ans + a.charAt(i) + b.charAt(i); 
+    }
+  }
+  else 
+  {
+    for(int i = 0 ; i < a.length(); i++)
+    {
+      ans = ans + a.charAt(i) + b.charAt(i); 
+    }
+    ans = ans + b.substring(b.length()-((b.length()-a.length())) ) ;
+  }
+  return ans ; 
+}
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 10)repeatEnd	 
+ public String repeatEnd(String str, int n) {
+  
+ String ans = ""; 
+ 
+  if(n==0)
+     return "" ; 
+   else
+  {
+   for(int i = 0 ; i < n; i++)
+   {
+     ans = ans +str.substring(str.length()-n)  ; 
+   }
+  
+ }
+  return ans ; 
+}
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 11)repeatFront	
+ public String repeatFront(String str, int n) {
+  String ans = ""; 
+  if(n==0 )
+  {
+    return ans ; 
+  }
+  while(n>0)
+  { 
+    ans =ans+ str.substring(0,n); 
+    n--; 
+  }
+  return ans ; 
+}
+ //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 12)repeatSeparator
+ 
+ public String repeatSeparator(String word, String sep, int count) {
+  
+  String ans = "" ; 
+  
+  if(count == 1  )
+    return word ; 
+    
+  if(count == 0  )
+    return "";   
+  
+    
+  
+  while (count > 1 )
+  {
+    ans = ans + word+sep ; 
+    count-- ; 
+  }
+  ans = ans + word ; 
+
+  return ans ; 
+}
+
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 13)prefixAgain
+ public boolean prefixAgain(String str, int n) {
+  
+ 
+ String ans = ""; 
+ String mac = ""; 
+ 
+  if(n==str.length()|| n ==0  )
+  return false ; 
+  else
+  {
+  mac = str . substring (0,n); 
+  for( int i = n ; i< str.length()-n+1; i ++) 
+  {
+    if( str.substring(i,i+n)    .equals(mac)     )
+     return true  ;    
+  }
+  }
+  return false ;   
+}
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 14) xyzMiddle	
+ public boolean xyzMiddle(String str) {
+
+     String mac = "xyz"; 
+     int count1 =  0 ; 
+     int count2 = 0 ; 
+ 
+       if(str.length()<3)
+       return false ; 
+       if (str.equals("xyz"))
+       return true; 
+ for(int i = 0 ; i < str.length()-2 ; i++ ) 
+ { 
+   if(   str.substring(i , i+3 ).equals("xyz") )
+          {
+            count1 =i-1 ; count2= str.length()-i+3 ; 
+            if( (count2-count1)==1||(count1-count2==1) ||count1==count2         )  
+                  return true ;  
+          }
+ }
+    return false ; 
+}
+ //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 15)getSandwich
+ 
+ public String getSandwich(String str) {
+ 
+ int first = str.indexOf("bread"); 
+ int last = str. lastIndexOf("bread"); 
+ 
+ if(first==last)    
+ return ""; 
+ 
+ else
+ return str.substring(first+5, last );   
+}
+
+ 
+ 
+ 
+ 
