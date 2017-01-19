@@ -1,0 +1,226 @@
+firstLast6 
+
+public boolean firstLast6(int[] nums) {
+  
+  int len = nums.length; 
+  
+  
+  if(nums[0]==6 || nums[len-1]==6)
+  return true ; 
+  
+  return false; 
+  
+}
+
+__________________________________________________________________________________
+
+sameFirstLast
+
+public boolean sameFirstLast(int[] nums) {
+  
+  
+  int len = nums.length;
+  if(len >=1   &&  nums[0]==nums[len-1])
+  return true ; 
+  else
+  return false ;  
+}
+
+__________________________________________________________________________________
+makePi
+
+public int[] makePi() {
+  
+  int [] pi = {3,1,4}; 
+  
+  
+  return pi ;
+
+}
+__________________________________________________________________________________
+ commonEnd
+ 
+ public boolean commonEnd(int[] a, int[] b) { 
+  if(a[0]==b[0] ||  a[a.length-1]==b[b.length-1])
+  
+  return true ;
+  return false; 
+}
+
+__________________________________________________________________________________
+ sum3	 
+ 
+public int sum3(int[] nums) {
+  int sum = nums[0]+nums[1]+nums[2] ; 
+  return sum ;
+}
+ 
+______________________________________________________________________________
+ rotateLeft3
+ public int[] rotateLeft3(int[] nums) {
+  int temp = nums[0]; 
+  
+  nums[0]=nums[1]; 
+  nums[1]=nums[2]; 
+  nums[2]= temp ; 
+  
+  return nums ;    
+}
+ _________________________________________________________________________________
+ reverse3
+ public int[] reverse3(int[] nums) {
+  
+  int temp ;
+   temp= nums[0] ; 
+  nums[0]=nums[2];
+  nums[2]= temp; 
+  return nums;   
+}
+
+ ____________________________________________________________________________________
+ maxEnd3
+ 
+ public int[] maxEnd3(int[] nums) {
+  
+  if(nums[0]>nums[2])
+  {
+    nums[1]=nums[0];
+    nums[2]= nums[0];
+    
+  }
+  else if (nums[0]<nums[2])
+  {
+    
+    nums[0]= nums[2];
+    nums[1] = nums [2];
+    
+  }
+  
+  else
+  nums[1]= nums[0];
+  return nums ;  
+}
+
+ _______________________________________________________________________________________
+ sum2
+ public int sum2(int[] nums) {
+  
+  int len = nums.length; 
+  int sum = 0  ; 
+  
+  if(len==0 )
+     return 0 ; 
+  if(len<2 ) 
+  {
+    sum = sum +nums[0] ; 
+    return sum ; 
+  }
+  sum = nums[0]+nums[1]; 
+  return sum ; 
+}
+______________________________________________________________________________________
+ middleWay	
+ 
+ 
+ public int[] middleWay(int[] a, int[] b) {
+  int[] ans = new int [2]; 
+  
+  
+  ans [0] =a[3/2] ;
+  ans [1] =b[3/3];
+  
+  
+  return ans ; 
+  
+}
+
+ _________________________________________________________________________________________
+ makeEnds	
+ public int[] makeEnds(int[] nums) { 
+  int [] qwert = new int[2] ; 
+  
+  int i = 0 ; 
+  
+  qwert[0] = nums[0] ; 
+  qwert[1]= nums[nums.length-1]; 
+  return qwert; 
+}
+
+ __________________________________________________________________________________________
+ 
+ has23
+ public boolean has23(int[] nums) {
+  
+  
+  for(int i= 0 ; i < nums.length; i ++ )
+  {
+    if(nums[i]==2  ||  nums[i]==3)
+    {
+      
+      return true; 
+    }
+  }
+  
+  return false;
+}
+
+ ______________________________________________________________________________________________
+ no23	
+ public boolean no23(int[] nums) {
+ 
+  if(nums[0]!=2 && nums[0]!=3 && nums[1]!=2 && nums[1]!=3 )
+  return true ;   
+  return false; 
+}
+
+ _______________________________________________________________________________________________
+ makeLast	
+ public int[] makeLast(int[] nums) {
+  
+  
+  int [] ans = new int[nums.length*2]; 
+  
+  for(int i = 0 ; i < ans.length; i ++ )
+  {
+    ans[i]= 0 ; 
+    
+  }
+  ans [ans.length-1]=nums[nums.length-1];
+  
+  return ans ;
+}
+
+ _______________________________________________________________________________________________
+ double23
+ 
+ public boolean double23(int[] nums) {
+  
+  if ( nums.length == 0 || nums.length == 1 )
+  return false ;
+  
+  if ((nums[0]==2 && nums[1]==2) ||  (nums[0]==3 && nums[1]==3)) 
+  {
+    return true ; 
+    
+  }
+  
+  return false ; 
+}
+
+ ________________________________________________________________________________________________
+ fix23	
+ ________________________________________________________________________________________________
+ start1
+ _______________________________________________________________________________________________
+ biggerTwo
+ __________________________________________________________________________________________________
+ makeMiddle	 
+ ___________________________________________________________________________________________________
+ plusTwo
+ swapEnds
+ midThree
+ maxTriple	
+ frontPiece
+ unlucky1	 
+ make2	 
+ front11
