@@ -8,3 +8,4 @@ Code relating to some popular core java problems
 5. Coding bat : Strings 2
 6.Coding bat : Arrays - 1 
 7. Given two arrays, merge them together (without using additional DS) and show the sorted array (quicksort) 
+8. Linked list java implementation : Node22.java and linkedlist22.java
